@@ -1,0 +1,2 @@
+#!/bin/sh
+egrep -q '(refs|closes|fixes) +#[0-9]+' $1 || { echo "Commit message have to begin with one of: refs, closes, fixes and a ticket id." >/dev/stderr && exit 1; }
