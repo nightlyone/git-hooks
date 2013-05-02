@@ -7,6 +7,7 @@ gofiles=$(git diff --cached --name-only --diff-filter=ACM | grep '.go$')
 
 if go build . ./...
 then
+	go clean . ./...
 	exit 0
 else
 	echo >&2 "Build failed, please commit only stuff that builds."
